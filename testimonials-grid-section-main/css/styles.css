@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+html {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+/* variables */
+
+:root {
+  --clr-primary-100: hsl(260, 100%, 95%);
+  --clr-primary-200: hsl(264, 82%, 80%);
+  --clr-primary-300: hsl(263, 55%, 52%);
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-200: hsl(214, 17%, 92%);
+  --clr-neutral-300: hsl(0, 0%, 81%);
+  --clr-neutral-400: hsl(224, 10%, 45%);
+  --clr-neutral-500: hsl(217, 19%, 35%);
+  --clr-neutral-600: hsl(219, 29%, 14%);
+  --clr-neutral-700: hsl(0, 0%, 7%);
+
+  --border-size: 2px solid;
+
+  --fs-xl: 1.5rem;
+  --fs-2xl: 1.7rem;
+
+  --fw-bold: 600;
+}

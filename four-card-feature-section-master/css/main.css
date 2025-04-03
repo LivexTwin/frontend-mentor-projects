@@ -1,0 +1,112 @@
+.wrapper {
+  padding-inline: 2rem;
+  margin-inline: auto;
+  max-width: 1100px;
+  margin-block-end: 6rem;
+}
+.wrapper--narrow {
+  max-width: 600px;
+}
+
+header {
+  text-align: center;
+  margin-block: 6rem;
+}
+
+header h1 {
+  font-size: var(--size-3xl);
+  padding-bottom: 1rem;
+}
+
+.card h2 {
+  font-size: var(--size-xl);
+  padding-bottom: 0.5rem;
+}
+
+#span {
+  font-weight: 200;
+}
+
+.layout-grid {
+  --gap: 2rem;
+
+  display: grid;
+  grid-auto-columns: 1fr;
+  gap: var(--gap);
+}
+
+/* mq */
+@media (min-width: 800px) {
+  .layout-grid {
+    grid-template-areas:
+      "... two   ...."
+      "one two   four"
+      "one three four"
+      "... three ....";
+  }
+
+  .card:nth-child(1) {
+    grid-area: one;
+  }
+
+  .card:nth-child(2) {
+    grid-area: two;
+  }
+
+  .card:nth-child(3) {
+    grid-area: three;
+  }
+
+  .card:nth-child(4) {
+    grid-area: four;
+  }
+}
+
+/* this allows me to drop in any child element adn it gets the same space */
+.layout-grid > * {
+  flex: 1;
+}
+
+.card {
+  --br: 0.325rem;
+  padding: 2rem;
+  border-top: var(--br) solid;
+  border-radius: var(--br);
+  box-shadow: 0 1rem 1.5rem -0.5rem rgb(0 50 100 / 0.15);
+}
+
+.card p {
+  font-size: var(--size-sm);
+}
+
+.card__img {
+  margin-left: auto;
+  margin-top: 2rem;
+}
+
+.border-100 {
+  border-color: var(--color-primary-100);
+}
+
+.border-200 {
+  border-color: var(--color-primary-200);
+}
+
+.border-300 {
+  border-color: var(--color-primary-300);
+}
+
+.border-400 {
+  border-color: var(--color-primary-400);
+}
+
+/* card styling */
+
+/* footer  */
+
+footer {
+  text-align: center;
+  font-size: var(--size-sm);
+  padding-inline: 0.5rem;
+  margin-block-end: 1rem;
+}

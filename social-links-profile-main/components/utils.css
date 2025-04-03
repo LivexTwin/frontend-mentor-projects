@@ -1,0 +1,51 @@
+/*  CHAMELEON RESPONSIVE SETUP */
+
+/* xs */
+/* @media (min-width: 475px) { 
+ 
+  } */
+
+/* sm */
+/* @media (min-width: 640px) {
+      
+  }  */
+
+/* md */
+/* @media (min-width: 768px) {
+      
+  }  */
+
+/* lg */
+/* @media (min-width: 1024px) {
+      
+  }  */
+
+/* xl */
+/* @media (min-width: 1280px) {
+      
+  }  */
+
+/* 2xl */
+/* @media (min-width: 1536px) {
+    
+  }   */
+
+@font-face {
+  font-family: vampireFont;
+  src: url(/assets/fonts/StrangeDreams-ZVRzl.ttf);
+}
+
+footer {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  pointer-events: none;
+}
+.attribution {
+  font-family: vampireFont, sans-serif;
+  color: var(--clr-slate400);
+  font-size: var(--size-sm);
+}

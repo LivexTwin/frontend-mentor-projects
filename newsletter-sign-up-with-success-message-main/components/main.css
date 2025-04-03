@@ -1,0 +1,100 @@
+/* ===MAIN STYLES=== */
+.container {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  min-width: 375px;
+
+  /* mite need 2 change height */
+}
+
+.card {
+  color: var(--clr-neutral100);
+  background-color: var(--clr-neutral400);
+  width: 100%;
+  box-shadow: 0 0 7rem 1rem #00000055;
+  max-width: 40rem;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.container__left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  padding: 2rem;
+}
+
+.container__left h1 {
+  color: var(--clr-neutral100);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.container__left p,
+.container__left li {
+  font-weight: 500;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.features li {
+  background-image: url(/assets/images/icon-list.svg);
+  background-repeat: no-repeat;
+  padding-left: 2rem;
+  background-position: 0 2.5px;
+}
+
+.signup-img {
+  width: 100%;
+}
+
+/* large screen centering */
+@media (min-width: 800px) {
+  main {
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+  }
+}
+
+/* ===MOBILE DESIGN=== */
+
+/* ===DESKTOP DESIGN=== */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 968px;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 4fr 3.2fr;
+
+    height: max-content;
+    border-radius: 2rem;
+  }
+  .container__left h1 {
+    font-size: 3.5rem;
+  }
+
+  .container__left {
+    display: flex;
+    justify-content: center;
+    padding-left: 3rem;
+    padding-right: 4.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .signup-img {
+    content: url(/assets/images/illustration-sign-up-desktop.svg);
+    width: 100%;
+  }
+  /* 
+  .container__right {
+    text-align: end;
+  } */
+}

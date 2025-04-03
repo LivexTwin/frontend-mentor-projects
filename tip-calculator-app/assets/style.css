@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+button {
+  all: unset;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-neutral-dark-cyan);
+}
+
+/* form reset */
+
+input {
+  margin: 0;
+  padding: 0;
+  border: none; /* or border: 1px solid transparent; */
+  background: none; /* or background: transparent; */
+  outline: none; /* Removes the focus outline */
+  box-shadow: none; /* Removes any box shadow */
+  min-width: 0;
+}
+
+/* input {
+  all: unset;
+  width: 100%;
+} */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide spin buttons in Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* input[type="radio"][name="tip"] {
+  display: none; 
+} */
+
+input[type="radio"] {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+}
+
+fieldset {
+  border: none; /* Remove the border */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+/* form reset end */
+
+html {
+  line-height: 1.5rem;
+  font-size: var(--fs-base);
+  color: var(--clr-neutral-dark-grayish-cyan);
+  font-weight: 700;
+  font-family: "Space Mono", sans-serif;
+}
+
+/* global variables */
+:root {
+  --clr-neutral-hover: hsl(172, 60.7%, 77.1%);
+  --clr-neutral-empty-button: hsl(183, 63.6%, 25.9%);
+
+  --clr-primary-radio-checked: hsl(172, 58.8%, 47.6%);
+  --clr-primary-cyan: hsl(172, 67%, 45%);
+  --clr-neutral-dark-cyan: hsl(183, 100%, 15%);
+  --clr-neutral-dark-grayish-cyan: hsl(186, 14%, 43%);
+  --clr-neutral-grayish-cyan: hsl(184, 14%, 56%);
+  --clr-neutral-light-grayish-cyan: hsl(185, 41%, 84%);
+  --clr-neutral-very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --clr-neutral-white: hsl(0, 0%, 100%);
+
+  /* font sizes */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 1.75rem;
+
+  /* border radius */
+  --br: 1.35rem;
+
+  /* for form */
+  /* --form-fs: 1.5rem; */
+  --form-fs: clamp(var(--fs-base), 6vw, var(--fs-xl));
+  --form-br: 0.325rem;
+  --form-border: 2px solid;
+  --form-margin: 0.5rem;
+
+  --transition: 0.3s ease;
+  /* padding */
+  --padding: 2rem 1.5rem;
+
+  --padding-inline: 0.9rem;
+  --padding-block: 0.75rem;
+
+  --spacing: 2rem;
+}

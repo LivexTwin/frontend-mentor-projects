@@ -1,0 +1,78 @@
+/* color variables */
+:root {
+  --clr-dark: hsl(158, 36%, 37%);
+  --clr-darker: hsl(158, 36%, 20%);
+  --clr-light: hsl(30, 38%, 92%);
+  --clr-slate400: hsl(212, 21%, 14%);
+  --clr-slate600: hsl(228, 12%, 48%);
+  --clr-slate800: hsl(0, 0%, 100%);
+  --clr-red: ;
+  --clr-inidgo: ;
+
+  /* for future reference put font weights and font families here */
+
+  /* comment color hex codes here for easy copy and paste*/
+
+  /* sizes */
+  --size-xxs: 0.5rem;
+  --size-xs: 0.75rem;
+  --size-sm: 0.875rem;
+  --size-base: 1rem;
+  --size-lg: 1.125rem;
+  --size-xl: 1.25rem;
+  --size-2xl: 1.5rem;
+  --size-3xl: 1.875rem;
+  --size-4xl: 2.25rem;
+  --size-5xl: 3rem;
+  --size-6xl: 3.75rem;
+  --size-7xl: 4.5rem;
+  --size-8xl: 6rem;
+  --size-9xl: 8rem;
+  --size-10xl: 10rem;
+}
+
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  line-height: calc(1em + 0.5rem);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font: "Montserrat", "Fraunces", sans-serif;
+  background-color: var(--clr-light);
+  /* for this project only */
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  user-select: none;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+button {
+  padding: 0.7em 1.7em;
+  border: none;
+  background: none;
+  cursor: pointer;
+}

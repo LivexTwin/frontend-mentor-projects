@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <!-- font  grab -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="/components/main.css" />
+    <link rel="stylesheet" href="/components/style.css" />
+    <link rel="stylesheet" href="/components/utils.css" />
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body>
+    <!-- Sign-up form start -->
+    <main>
+      <div class="container card">
+        <div class="container__left">
+          <h1>Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul class="features">
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a success</li>
+            <li>And much more!</li>
+          </ul>
+
+          <form class="form" action="#">
+            <label for="email"> Email address</label>
+            <div class="email-signup">
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder=" email@company.com"
+              />
+              <span class="error-message">Valid email required</span>
+              <button type="button" class="submit-btn">
+                Subscribe to monthly newsletter
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="container__right">
+          <img
+            class="signup-img"
+            src="/assets/images/illustration-sign-up-mobile.svg"
+            alt="signup img"
+          />
+        </div>
+      </div>
+      <!-- Sign-up form end -->
+
+      <!-- Success message start -->
+
+      <div class="success-card card hidden">
+        <img src="assets/images/icon-success.svg" alt="success img" />
+        <h2>Thanks for subscribing!</h2>
+        <p>
+          A confirmation email has been sent to
+          <span class="subscribed-email">ash@loremcompany.com</span>. Please
+          open it and click the button inside to confirm your subscription.
+        </p>
+        <button class="submit-btn dismiss-btn">Dismiss message</button>
+      </div>
+      <!-- Success message end -->
+    </main>
+  </body>
+  <!-- Attribution -->
+  <footer>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/LivexTwin">Live☆Twin</a>
+    </div>
+  </footer>
+  <script src="index.js"></script>
+</html>

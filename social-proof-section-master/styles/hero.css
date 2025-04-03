@@ -1,0 +1,144 @@
+h1 {
+  font-size: var(--size-4xl);
+  line-height: 0.8;
+  letter-spacing: -0.7px;
+  max-width: 12ch;
+  margin-bottom: 0.6em;
+  color: var(--clr-slate400);
+  font-weight: 700;
+
+  @media (max-width: 50em) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.reviews li {
+  background: var(--clr-light);
+  font-weight: 700;
+  color: var(--clr-slate400);
+  --flow-space: 1rem;
+  /* padding may change once stars are added */
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  max-width: 29em;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  &::before {
+    content: "";
+    width: 100px;
+    height: 1rem;
+    margin: 0 auto;
+    display: block;
+    background-image: url(../images/icon-star.svg);
+    margin-bottom: 0.5rem;
+    background-repeat: space;
+  }
+
+  @media (min-width: 475px) {
+    display: flex;
+    align-content: center;
+
+    &::before {
+      margin: 0 1.5rem 0 0;
+    }
+
+    &:first-of-type {
+      transform: translateX(-3rem);
+    }
+
+    &:last-of-type {
+      transform: translateX(3rem);
+    }
+  }
+}
+
+.quotes {
+  margin-bottom: 12rem;
+}
+
+.quotes li {
+  &:nth-child(2) {
+    transform: translateY(3rem);
+  }
+
+  &:nth-child(3) {
+    transform: translateY(6rem);
+  }
+}
+
+blockquote {
+  background: var(--clr-slate400);
+  padding: 1.8rem;
+  max-width: 25rem;
+  border-radius: 8px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+
+.quotes img {
+  border-radius: 50%;
+  width: 2.8rem;
+  margin-right: 1rem;
+}
+
+.split {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+
+  @media (min-width: 475px) {
+    flex-direction: row;
+  }
+}
+
+.quotes__split {
+  display: flex;
+  flex-direction: row;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.name {
+  color: var(--clr-white);
+  font-weight: 700;
+}
+
+.status {
+  color: var(--clr-slate600);
+}
+
+.quote {
+  margin-top: 2rem;
+  color: var(--clr-white);
+}
+
+.social__proof {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 475px) {
+  .social__proof {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+
+  .intro {
+    grid-column: 1 / 2;
+  }
+
+  .reviews {
+    grid-column: 2 / 3;
+  }
+
+  .quotes {
+    grid-column: 1/ -1;
+  }
+}

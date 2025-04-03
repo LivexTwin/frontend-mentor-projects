@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* variables */
+:root {
+  /* fonts */
+  --ff: "Manrope", sans-serif;
+  --fw: 500;
+  --fw-bold: 700;
+
+  --fs-sm: 0.86rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+
+  /* border radius */
+  --br: 10px;
+
+  /* bs */
+  --bs: 10px 10px 50px -40px #48556a;
+
+  --clr-darkest-blue: hsl(217, 19%, 35%);
+  --clr-darker-blue: hsl(214, 17%, 51%);
+  --clr-light-blue: hsl(212, 23%, 69%);
+  --clr-lightest-blue: hsl(210, 46%, 95%);
+  --clr-white: hsl(0, 0%, 99%);
+}
+
+html {
+  font-family: var(--ff);
+  font-weight: var(--fw);
+  color: var(--clr-darkest-blue);
+}
+
+body {
+  background-color: var(--clr-lightest-blue);
+}

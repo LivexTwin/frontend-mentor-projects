@@ -1,0 +1,99 @@
+/* h1-h5 styles */
+h1,
+h2 {
+  font-weight: var(--fw-2);
+}
+
+strong {
+  font-weight: var(--fw-1);
+  color: var(--text-color);
+}
+
+/* Make SelectRoot a container with relative positioning */
+.SelectRoot {
+  position: relative; /* This makes sure the dropdown is positioned relative to this container */
+}
+
+/* Styling for Radix Select dropdown */
+.SelectTrigger {
+  padding: 0.75rem 1rem;
+  background-color: var(--card-bg);
+  border-radius: var(--br);
+  box-shadow: var(--bs);
+  margin-bottom: 1rem;
+  cursor: pointer;
+  width: 150px;
+  font-size: var(--size-xs);
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Position the dropdown below the SelectTrigger */
+.SelectContent {
+  position: absolute; /* Position it relative to the parent element */
+  /* top: 0; */
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure it appears above other elements */
+  overflow: hidden;
+
+  box-shadow: var(--bs);
+  background-color: var(--clr-light);
+
+  overflow-y: auto; /* Allows scrolling if there are many options */
+}
+
+/* Styling for dropdown items */
+.SelectItem {
+  padding: 0.5rem;
+  background-color: var(--clr-light);
+  cursor: pointer;
+  background-color: var(--card-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--size-xs);
+}
+
+.SelectItemIndicator {
+  position: absolute;
+  right: 10px;
+  width: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SelectTrigger:focus,
+.SelectItem:focus {
+  outline: none;
+}
+
+.SelectItem:hover {
+  background-color: var(--hover);
+}
+
+/* buttons */
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--size-xs);
+  padding: 0.2rem 1.5rem;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  box-shadow: var(--bs);
+  border-radius: var(--br);
+  color: var(--clr-secondary-1);
+}
+
+/* mq lr */
+@media (min-width: 1440px) {
+  .btn {
+    padding: 0.5rem 2.5rem;
+  }
+}
+/*  */
+/*  */

@@ -1,0 +1,195 @@
+.calculator-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+  padding-inline: 0.5rem;
+}
+
+/* mq */
+@media (min-width: 1080px) {
+  .calculator-form {
+    padding-block: var(--padding-block);
+  }
+}
+
+.calculator-input__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  border-radius: var(--form-br);
+  margin-top: 0.5rem;
+  cursor: pointer;
+
+  border: var(--form-border) transparent;
+}
+
+.calculator-input__icon {
+  position: absolute;
+  left: var(--padding-inline);
+}
+
+.calculator-input__input {
+  text-align: end;
+  font-size: var(--form-fs);
+  color: var(--clr-neutral-dark-cyan);
+  background-color: var(--clr-neutral-very-light-grayish-cyan);
+  border: var(--form-border) transparent;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit; /* addedthis */
+  /* padding-block: calc(var(--padding-block) - 6px); */
+  min-height: 3rem;
+  padding-inline-start: calc(var(--padding-inline) * 2);
+  padding-inline-end: var(--padding-inline);
+
+  transition: border var(--transition);
+}
+
+.calculator-input__input::placeholder {
+  color: var(--clr-neutral-grayish-cyan);
+}
+
+.calculator-input__input:focus-within,
+.calculator-input__input:hover {
+  border: var(--form-border) var(--clr-primary-cyan); /* Change border on focus */
+  transition: border var(--transition); /* Smooth transition */
+}
+
+.calculator-input__label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* mq */
+@media (max-width: 350px) {
+  .calculator-input__label {
+    flex-direction: column;
+  }
+}
+
+/* form radio */
+.calculator-fieldset__options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(105px, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 410px) and (max-width: 1080px) {
+  .calculator-fieldset__options {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+  }
+}
+
+/* form custom  */
+.calculator-input__input--custom {
+  border-radius: var(--form-br);
+  padding-inline: var(--padding-inline);
+  padding-block: 0; /* remove padding from custom */
+}
+
+/* fieldset */
+.calculator-fieldset__label {
+  text-align: center;
+  padding-block: var(--padding-block);
+  font-size: var(--form-fs);
+  color: var(--clr-neutral-white);
+  background-color: var(--clr-neutral-dark-cyan);
+  border-radius: var(--form-br);
+}
+
+/* Style for when the radio button is checked (selected state) */
+input[type="radio"]:checked + .calculator-fieldset__label {
+  background-color: var(--clr-primary-radio-checked);
+  color: var(--clr-neutral-dark-cyan);
+  transition: var(--transition);
+}
+
+.calculator-fieldset__label,
+.calculator-input__input {
+  cursor: pointer;
+}
+
+.calculator-fieldset__legend {
+  margin-bottom: 1rem;
+}
+
+/* form totals */
+.calculator-totals {
+  background-color: var(--clr-neutral-dark-cyan);
+  color: var(--clr-neutral-white);
+  padding-inline: calc(var(--padding-inline) + 0.5rem);
+  /* padding: 1.5rem 1.5rem; */
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-radius: 1rem;
+}
+
+/* mq */
+@media (min-width: 1080px) {
+  .calculator-totals {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    --pad-mq: 2.5rem;
+    padding-inline: var(--pad-mq);
+    padding-top: 3.5rem;
+    padding-bottom: var(--pad-mq);
+  }
+}
+
+.calculator-totals__container {
+  padding-bottom: var(--spacing);
+}
+
+.calculator-totals__span {
+  font-size: var(--fs-xs);
+  color: var(--clr-neutral-grayish-cyan);
+}
+
+.calculator-totals__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 320px) {
+  .calculator-totals__flex {
+    display: block;
+  }
+
+  .calculator-totals__result {
+    text-align: end;
+    padding-top: 1rem;
+  }
+}
+
+.calculator-totals__flex:first-of-type {
+  padding-bottom: 1.5rem;
+}
+
+.calculator-totals__result {
+  /* font-size: var(--fs-2xl); */
+  font-size: clamp(var(--fs-xs), calc(5vw + 1rem), 3rem);
+  color: var(--clr-primary-cyan);
+}
+
+.calculator-totals__reset {
+  text-align: center;
+  width: 100%;
+  font-size: var(--form-fs);
+  padding-block: var(--padding-block);
+  background-color: var(--clr-primary-radio-checked);
+  color: var(--clr-neutral-dark-cyan);
+  border-radius: var(--form-br);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.calculator-totals__reset:disabled {
+  background-color: var(--clr-neutral-empty-button);
+  color: rgba(13, 94, 99); /* Dimmed text color */
+  cursor: not-allowed; /* Change cursor to indicate it can't be clicked */
+}
+
+/*  GET READY FOR EMPTY STATE AND FIRST INITIAL STATE LOGIC */

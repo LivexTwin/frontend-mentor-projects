@@ -1,0 +1,124 @@
+/* general */
+
+body {
+  min-height: 100dvh;
+  min-height: 100svh;
+  background-color: var(--clr-neutral-light-grayish-cyan);
+}
+
+.logo__container > #logo {
+  margin-inline: auto;
+  padding-block-start: clamp(3.5rem, 1vw, 4rem);
+  padding-block-end: clamp(2.5rem, 5vw, 3rem);
+}
+
+@media (min-width: 1440px) {
+  .logo__container > #logo {
+    padding-block-start: 10.5rem;
+    padding-block-end: 5rem;
+  }
+}
+
+/* components */
+.calculator__container {
+  background-color: var(--clr-neutral-white);
+  box-shadow: -5px 7px 54px -27px rgba(0, 73, 78, 0.5);
+
+  padding: var(--padding);
+  border-radius: var(--br);
+  /* to do  */
+  /* width: min(90%, 60rem); */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+  margin-inline: auto;
+}
+
+/* mq */
+@media (min-width: 764px) {
+  .calculator__container {
+    width: min(90%, 58rem);
+  }
+}
+
+@media (min-width: 1080px) {
+  .calculator__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-inline-start: 2.5rem;
+    padding-inline-end: 2rem;
+  }
+}
+
+/* button hovers */
+.calculator-fieldset__label:hover,
+.calculator-totals__reset:hover {
+  background-color: var(--clr-neutral-hover);
+  color: var(--clr-neutral-dark-cyan);
+  transition: var(--transition);
+}
+
+/* js  */
+.calculator-input__input {
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for smooth effects */
+}
+
+.calculator-input__input.initial-state {
+  outline-width: 1px;
+  outline-offset: 0;
+  outline-color: hsl(172, 67%, 45%); /* Initial color */
+  outline-style: solid;
+  /* animation: animateOutline 4s ease infinite; */
+  animation: animateOutline 2s ease forwards;
+}
+
+@keyframes animateOutline {
+  0% {
+    outline-width: 2px;
+    outline-offset: 0;
+    outline-color: rgba(172, 67, 45, 0); /* Transparent */
+  }
+
+  10% {
+    outline-color: hsl(172, 67%, 45%); /* Primary color */
+  }
+
+  50% {
+    outline-width: 3px; /* Adjusted width */
+    outline-offset: 2px; /* Adjusted offset */
+    outline-color: rgba(172, 67, 45, 0); /* Transparent */
+  }
+
+  100% {
+    outline-width: 3px; /* Adjusted width */
+    outline-offset: 2px; /* Adjusted offset */
+    outline-color: rgba(102, 102, 102, 0); /* Optional fallback color */
+  }
+}
+
+/* error styes */
+.error-message {
+  color: hsl(12, 65.2%, 68.4%);
+  font-size: var(--fs-sm);
+  display: none;
+}
+
+.calculator-input__input.error {
+  border: 2px solid hsl(12, 65.2%, 68.4%);
+}
+
+/* attribution */
+
+.attribution {
+  text-align: center;
+  font-size: var(--fs-xs);
+  padding-top: 4rem;
+  padding-bottom: 0.5rem;
+}
+
+@media (max-width: 460px) {
+  .attribution {
+    max-width: 15rem;
+    margin-inline: auto;
+  }
+}

@@ -1,0 +1,161 @@
+/* color variables */
+:root {
+  --clr-dark: #16171d;
+  --clr-light: hsl(0, 0%, 100%);
+  --clr-primary-1: #1f1f24;
+  --clr-primary-2: hsl(0, 0%, 98%);
+
+  --clr-secondary-1: hsl(0, 0%, 52%);
+
+  /* Default to light theme */
+  --background-color: var(--clr-primary-2);
+  --text-color: var(--clr-dark);
+  --hover: var(--clr-primary-2);
+  --header-bg: var(--clr-light);
+  --card-bg: var(--clr-light); /* Override for lighter card */
+
+  /* weights */
+  --fw-1: 300;
+  --fw-2: 600;
+  --fw-3: 800;
+
+  /* padding */
+  --pad-1: 2rem;
+
+  --br: 3px;
+  --bs: 1px 1px 17px -7px #4d4a4a58;
+
+  /* sizes */
+  --size-xxs: 0.575rem;
+  --size-xs: 0.75rem;
+  --size-sm: 0.875rem;
+  --size-base: 1rem;
+  --size-lg: 1.125rem;
+  --size-xl: 1.25rem;
+  --size-2xl: 1.5rem;
+  --size-3xl: 1.875rem;
+  --size-4xl: 2.25rem;
+  --size-5xl: 3rem;
+  --size-6xl: 3.75rem;
+  --size-7xl: 4.5rem;
+  --size-8xl: 6rem;
+  --size-9xl: 8rem;
+  --size-10xl: 10rem;
+}
+
+/* dark mode config */
+/* Dark mode for system preference */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: var(--clr-dark);
+    --text-color: var(--clr-light);
+  }
+} */
+
+/* Alternatively, use `.dark` class to force dark mode */
+.dark {
+  --background-color: var(--clr-dark);
+  --text-color: var(--clr-light);
+  --header-bg: var(--clr-primary-1); /* Override for lighter header */
+  --card-bg: var(--clr-primary-1); /* Override for lighter card */
+  --hover: rgba(0, 0, 0, 0.864);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  line-height: calc(1em + 0.5rem);
+}
+/* 
+html {
+  scroll-behavior: smooth;
+} */
+
+body {
+  height: 100%;
+  font-family: "Nunito", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  user-select: none;
+}
+
+input,
+button,
+textarea,
+select,
+a {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Ensure all headings inherit font-size and font-family from their parent */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+li,
+ol,
+ul {
+  list-style: none;
+}
+
+a,
+a:hover,
+a::before,
+a::after {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent; /* Removes tap highlight on touch devices */
+  outline: none; /* Removes focus outline */
+}

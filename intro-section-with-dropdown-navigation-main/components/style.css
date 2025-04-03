@@ -1,0 +1,152 @@
+/* color variables */
+
+:root {
+  /* ### Primary
+  
+  /*  */
+
+  --clr-dark: hsl(0, 0%, 8%);
+  --clr-light: hsl(0, 0%, 41%);
+  --clr-slate400: ;
+  --clr-slate600: ;
+  --clr-slate800: ;
+  --clr-white: hsl(0, 0%, 98%);
+
+  /* comment color hex codes here for easy copy and paste*/
+
+  /* sizes */
+  --size-xxs: 0.5rem;
+  --size-xs: 0.75rem;
+  --size-sm: 0.875rem;
+  --size-base: 1rem;
+  --size-lg: 1.125rem;
+  --size-xl: 1.25rem;
+  --size-2xl: 1.5rem;
+  --size-3xl: 1.875rem;
+  --size-4xl: 2.25rem;
+  --size-5xl: 3rem;
+  --size-6xl: 3.75rem;
+  --size-7xl: 4.5rem;
+  --size-8xl: 6rem;
+  --size-9xl: 8rem;
+  --size-10xl: 10rem;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: calc(1em + 0.5rem);
+}
+
+body {
+  height: 100dvh;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family: "epilogue", sans-serif;
+  background-color: var(--clr-white);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  user-select: none;
+}
+
+button {
+  display: inline-block;
+  padding: 0;
+  border: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0 !important;
+}
+
+/* =====BUTTONS==== */
+
+.outlined-btn,
+.transparent-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 12px;
+  color: var(--clr-light);
+  font-weight: 700;
+  background-color: transparent;
+}
+
+.transparent-btn {
+  border: none;
+}
+
+.transparent-btn:hover {
+  color: var(--clr-dark);
+  transition: 1s;
+}
+
+.outlined-btn {
+  border: 2px solid var(--clr-light);
+}
+
+.outlined-btn:hover {
+  font-weight: 700;
+  color: var(--clr-dark);
+  border: 2px solid var(--clr-dark);
+  transition: 1s;
+}
+
+.btn {
+  background-color: var(--clr-dark);
+  color: var(--clr-white);
+  padding: 1rem 2rem;
+  font-size: var(--size-xl);
+  font-weight: 700;
+  border: 1px solid transparent;
+  border-radius: 18px;
+  max-width: 180px;
+}
+
+.btn:hover {
+  background-color: var(--clr-white);
+
+  color: var(--clr-dark);
+  border: 1px solid var(--clr-dark);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.attribution,
+.attribution a {
+  font-size: var(--size-xs);
+  color: inherit;
+}
+
+/* 
+background-color: var(--clr-white);
+  color: var(--clr-dark);
+  border: 1px solid var(--clr-dark);
+  transition: 1s; */
